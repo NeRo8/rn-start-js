@@ -6,6 +6,7 @@ import { createAuthScreen, createDefaultStyle } from "./assets/screens";
 import appData from "./assets/index";
 
 import { createFolder } from "./utils";
+import installAllPackage from "./utils/installPackage";
 
 const foldersList = [
   {
@@ -80,4 +81,5 @@ export function cli(args) {
   foldersList.forEach((item) => {
     createFolder(item.folder, item.files);
   });
+  installAllPackage();
 }
