@@ -10,7 +10,7 @@ import installAllPackage from "./utils/installPackage";
 
 const foldersList = [
   {
-    folder: "srcs",
+    folder: "src",
     files: [
       {
         name: "index",
@@ -20,14 +20,14 @@ const foldersList = [
     ],
   },
   {
-    folder: "srcs/api",
+    folder: "src/api",
     files: [{ name: "index", type: "js", data: apiData }],
   },
-  { folder: "srcs/assets" },
-  { folder: "srcs/assets/images" },
-  { folder: "srcs/assets/fonts" },
+  { folder: "src/assets" },
+  { folder: "src/assets/images" },
+  { folder: "src/assets/fonts" },
   {
-    folder: "srcs/constants",
+    folder: "src/constants",
     files: [
       {
         name: "images",
@@ -44,37 +44,37 @@ const foldersList = [
       { name: "index", type: "js", data: createConstIndex() },
     ],
   },
-  { folder: "srcs/components" },
+  { folder: "src/components" },
   {
-    folder: "srcs/i18n",
+    folder: "src/i18n",
     files: [{ name: "index", type: "js", data: createTranslateIndex() }],
   },
   {
-    folder: "srcs/i18n/translation",
+    folder: "src/i18n/translation",
     files: [
       { name: "ru", type: "json", data: createTranslateFile() },
       { name: "en", type: "json", data: createTranslateFile() },
     ],
   },
   {
-    folder: "srcs/navigation",
+    folder: "src/navigation",
     files: [
       { name: "authStack", type: "js", data: createAuthStack() },
       { name: "index", type: "js", data: createNavigationIndex() },
     ],
   },
-  { folder: "srcs/redux" },
-  { folder: "srcs/screens" },
-  { folder: "srcs/screens/Auth/" },
+  { folder: "src/redux" },
+  { folder: "src/screens" },
+  { folder: "src/screens/Auth/" },
   {
-    folder: "srcs/screens/Auth/Auth",
+    folder: "src/screens/Auth/Auth",
     files: [
       { name: "index", type: "js", data: createAuthScreen() },
       { name: "styles", type: "js", data: createDefaultStyle() },
     ],
   },
-  { folder: "srcs/styles" },
-  { folder: "srcs/utils" },
+  { folder: "src/styles" },
+  { folder: "src/utils" },
 ];
 
 export function cli(args) {
