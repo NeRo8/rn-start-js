@@ -1,0 +1,24 @@
+{
+  "name": "rn-start-js",
+  "version": "1.0.0",
+  "description": "CLI for adding default folders to RN project.",
+  "main": "src/index.js",
+  "bin": {
+    "rn-init": "bin/rn-start-js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "rn-init"
+  ],
+  "author": "nero",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
