@@ -1,9 +1,9 @@
-import apiData from "./assets/api";
-import { createConstIndex, createConstFile } from "./assets/constants";
-import { createTranslateFile, createTranslateIndex } from "./assets/i18n";
-import { createAuthStack, createNavigationIndex } from "./assets/navigation";
-import { createAuthScreen, createDefaultStyle } from "./assets/screens";
-import appData from "./assets/index";
+import apiData from "./static/api";
+import { createConstIndex, createConstFile } from "./static/constants";
+import { createTranslateFile, createTranslateIndex } from "./static/i18n";
+import { createAuthStack, createNavigationIndex } from "./static/navigation";
+import { createAuthScreen, createDefaultStyle } from "./static/screens";
+import appData from "./static/index";
 
 import { createFolder } from "./utils";
 import installAllPackage from "./utils/installPackage";
@@ -81,5 +81,5 @@ export function cli(args) {
   foldersList.forEach((item) => {
     createFolder(item.folder, item.files);
   });
-  installAllPackage();
+  //installAllPackage();
 }
