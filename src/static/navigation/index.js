@@ -5,9 +5,6 @@ function createAuthStack() {
   import { useSelector } from 'react-redux';
 
   import Auth from '../screens/Auth/Auth';
-  import RestorePassword from '../screens/Auth/RestorePassword';
-  import SignIn from '../screens/Auth/SignIn';
-  import SignUp from '../screens/Auth/SignUp';
 
   const Stack = createStackNavigator();
 
@@ -25,9 +22,6 @@ function createAuthStack() {
               },
               }}
           />
-          <Stack.Screen name="SignIn" component={SignIn} />
-          <Stack.Screen name="SignUp" component={SignUp} />
-          <Stack.Screen name="RestorePassword" component={RestorePassword} />
           </Stack.Navigator>
       );
   }

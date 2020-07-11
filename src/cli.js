@@ -7,6 +7,11 @@ import appData from "./static/index";
 
 import { createFolder } from "./utils";
 import installAllPackage from "./utils/installPackage";
+import { generateReduxFolder } from "./static/redux";
+import {
+  createErrorBoundaryComponent,
+  createErrorBoundaryStyles,
+} from "./static/components";
 
 const foldersList = [
   {
@@ -46,6 +51,13 @@ const foldersList = [
   },
   { folder: "src/components" },
   {
+    folder: "src/components/ErrorBoundary",
+    files: [
+      { name: "index", type: "js", data: createErrorBoundaryComponent() },
+      { name: "styles", type: "js", data: createErrorBoundaryStyles() },
+    ],
+  },
+  {
     folder: "src/i18n",
     files: [{ name: "index", type: "js", data: createTranslateIndex() }],
   },
@@ -59,10 +71,15 @@ const foldersList = [
   {
     folder: "src/navigation",
     files: [
-      { name: "authStack", type: "js", data: createAuthStack() },
+      { name: "AuthStack", type: "js", data: createAuthStack() },
       { name: "index", type: "js", data: createNavigationIndex() },
     ],
   },
+  { folder: "src/redux" },
+  { folder: "src/redux/auth" },
+  { folder: "src/redux/error" },
+  { folder: "src/redux/themes" },
+  { folder: "src/redux/themes/mode" },
   { folder: "src/redux" },
   { folder: "src/screens" },
   { folder: "src/screens/Auth/" },
@@ -81,5 +98,7 @@ export function cli(args) {
   foldersList.forEach((item) => {
     createFolder(item.folder, item.files);
   });
-  //installAllPackage();
+  generateReduxFolder();
+
+  installAllPackage();
 }

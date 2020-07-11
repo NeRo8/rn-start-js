@@ -34,7 +34,7 @@ function execShellCommand(cmd) {
 }
 
 export default function installAllPackage() {
-  console.log(chalk.yellow("\nPlease wait, we install the packages\n"));
+  console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
   packageList.forEach((item) => {
     execShellCommand(item);
   });
