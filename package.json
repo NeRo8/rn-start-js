@@ -1,6 +1,6 @@
 {
-  "name": "rn-start-js",
-  "version": "1.0.0",
+  "name": "@my_name_is_nero/rn-start-js",
+  "version": "1.0.1",
   "description": "CLI for adding default folders to RN project.",
   "main": "src/index.js",
   "bin": {
@@ -13,11 +13,10 @@
     "access": "public"
   },
   "keywords": [
-    "cli",
     "rn-init"
   ],
-  "author": "nero",
-  "license": "ISC",
+  "author": "my_name_is_nero",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
     "esm": "^3.2.25"
