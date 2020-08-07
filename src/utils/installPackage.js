@@ -18,6 +18,14 @@ const packageList = [
   "@react-navigation/stack",
 ];
 
+const tsPackageList = [
+  "typescript",
+  "@types/jest",
+  "@types/react",
+  "@types/react-native",
+  "@types/react-test-renderer",
+];
+
 function execShellCommand(cmd) {
   const exec = require("child_process").exec;
 
@@ -33,8 +41,17 @@ function execShellCommand(cmd) {
   });
 }
 
+export function installAllTsPackage() {
+  console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
+  const packageL = packageList.concat(tsPackageList);
+  packageL.forEach((item) => {
+    execShellCommand(item);
+  });
+}
+
 export default function installAllJsPackage() {
   console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
+
   packageList.forEach((item) => {
     execShellCommand(item);
   });

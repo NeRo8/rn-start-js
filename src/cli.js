@@ -1,4 +1,6 @@
-import installAllJsPackage from "./utils/installPackage";
+import installAllJsPackage, {
+  installAllTsPackage,
+} from "./utils/installPackage";
 
 var path = require("path");
 var fs = require("fs-extra");
@@ -25,6 +27,8 @@ function installTs() {
       return console.error(err);
     }
   });
+
+  // installAllTsPackage();
 }
 
 export function cli(args) {
