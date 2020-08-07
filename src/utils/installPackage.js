@@ -40,7 +40,7 @@ function execShellCommand(cmd) {
     }
 
     stdout
-      ? console.log(chalk.green(`Success install package`, stdout))
+      ? console.log(chalk.green(`Success install package\n`, stdout))
       : console.log(chalk.green(`Error  install package`, stderr));
   });
 }
@@ -57,7 +57,7 @@ function execShellCommandDev(cmd) {
     }
 
     stdout
-      ? console.log(chalk.green(`Success install package`, stdout))
+      ? console.log(chalk.green(`Success install package\n`, stdout))
       : console.log(chalk.green(`Error  install package`, stderr));
   });
 }
@@ -65,19 +65,13 @@ function execShellCommandDev(cmd) {
 export function installAllTsPackage() {
   console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
 
-  packageList.forEach((item) => {
-    execShellCommand(item);
-  });
+  execShellCommand(packageList.join(" "));
 
-  tsPackageList.forEach((item) => {
-    execShellCommandDev(item);
-  });
+  execShellCommandDev(tsPackageList.join(" "));
 }
 
 export default function installAllJsPackage() {
   console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
 
-  packageList.forEach((item) => {
-    execShellCommand(item);
-  });
+  execShellCommand(packageList.join(" "));
 }
