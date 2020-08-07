@@ -33,7 +33,7 @@ function execShellCommand(cmd) {
   });
 }
 
-export default function installAllPackage() {
+export default function installAllJsPackage() {
   console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
   packageList.forEach((item) => {
     execShellCommand(item);

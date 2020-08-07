@@ -1,13 +1,13 @@
-import installAllPackage from "./utils/installPackage";
+import installAllJsPackage from "./utils/installPackage";
 
-// include fs-extra package
 var path = require("path");
 var fs = require("fs-extra");
 
-var source = path.join(__dirname, "/static");
+var sourceJS = path.join(__dirname, "/static/js");
+var sourceTS = path.join(__dirname, "/static/ts");
 var destination = process.cwd() + "/src";
 
-export function cli(args) {
+function installJs() {
   fs.copy(source, destination, function (err) {
     if (err) {
       console.log("An error occured while copying the folder.");
@@ -15,5 +15,22 @@ export function cli(args) {
     }
   });
 
-  installAllPackage();
+  // installAllJsPackage();
+}
+
+function installTs() {
+  fs.copy(source, destination, function (err) {
+    if (err) {
+      console.log("An error occured while copying the folder.");
+      return console.error(err);
+    }
+  });
+}
+
+export function cli(args) {
+  if (args[2] === "ts") {
+    installTs();
+  } else {
+    installJs();
+  }
 }
