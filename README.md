@@ -13,10 +13,20 @@ npm i @my_name_is_nero/rn-start-js
 
 ## Usage
 
-Run command
+Run command:
+
+#### TypeScript
+
+Currently, type script requires additional settings of linter and prettier
 
 ```
-npx rn-init
+npx rn-start ts
+```
+
+#### JavaScript
+
+```
+npx rn-start js
 ```
 
 In root `index.js` change line

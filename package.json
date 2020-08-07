@@ -1,7 +1,7 @@
 {
   "name": "@my_name_is_nero/rn-start-js",
-  "version": "1.0.4",
-  "description": "CLI for adding default folders to RN project.",
+  "version": "1.0.5",
+  "description": "CLI for creating default project structure in RN project.",
   "main": "src/index.js",
   "bin": {
     "rn-start": "bin/rn-start-js"
@@ -17,7 +17,7 @@
     "access": "public"
   },
   "keywords": [
-    "rn-init"
+    "rn-start"
   ],
   "author": "my_name_is_nero",
   "license": "MIT",
