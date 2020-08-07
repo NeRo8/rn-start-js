@@ -21,7 +21,7 @@ const packageList = [
 function execShellCommand(cmd) {
   const exec = require("child_process").exec;
 
-  console.log(chalk.yellow(`Command ${cmd} is running`));
+  console.log(chalk.yellow(`{cmd} installation process has started`));
   exec(`npm install --save ${cmd}`, (error, stdout, stderr) => {
     if (error) {
       console.log(chalk.red("Error:", error));
