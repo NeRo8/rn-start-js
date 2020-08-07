@@ -4,7 +4,7 @@
   "description": "CLI for adding default folders to RN project.",
   "main": "src/index.js",
   "bin": {
-    "rn-init": "bin/rn-start-js"
+    "rn-start": "bin/rn-start-js"
   },
   "repository": {
     "type": "git",

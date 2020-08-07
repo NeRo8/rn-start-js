@@ -29,8 +29,27 @@ const tsPackageList = [
 function execShellCommand(cmd) {
   const exec = require("child_process").exec;
 
-  console.log(chalk.yellow(`{cmd} installation process has started`));
+  console.log(
+    chalk.yellow(`Dependencies ${cmd} installation process has started`)
+  );
   exec(`npm install --save ${cmd}`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(chalk.red("Error:", error));
+    }
+
+    stdout
+      ? console.log(chalk.green(`Success install package`, stdout))
+      : console.log(chalk.green(`Error  install package`, stderr));
+  });
+}
+
+function execShellCommandDev(cmd) {
+  const exec = require("child_process").exec;
+
+  console.log(
+    chalk.yellow(`Dev Dependencies ${cmd} installation process has started`)
+  );
+  exec(`npm install --save-dev ${cmd}`, (error, stdout, stderr) => {
     if (error) {
       console.log(chalk.red("Error:", error));
     }
@@ -43,9 +62,13 @@ function execShellCommand(cmd) {
 
 export function installAllTsPackage() {
   console.log(chalk.yellow("\nPlease wait, we install dependencies\n"));
-  const packageL = packageList.concat(tsPackageList);
-  packageL.forEach((item) => {
+
+  packageList.forEach((item) => {
     execShellCommand(item);
+  });
+
+  tsPackageList.forEach((item) => {
+    execShellCommandDev(item);
   });
 }
 

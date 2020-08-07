@@ -1,8 +1,8 @@
-import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {useSelector} from 'react-redux';
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import { useSelector } from "react-redux";
 
-import Auth from '../screens/Auth/Auth';
+import Auth from "../screens/Auth/Auth";
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ export default function AuthStack() {
         name="Auth"
         component={Auth}
         options={{
-          headerTitle: 'Authorization',
+          headerTitle: "Authorization",
           headerStyle: {
             backgroundColor: theme.$headerBackground,
           },
