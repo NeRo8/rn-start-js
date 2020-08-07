@@ -24,6 +24,8 @@ const tsPackageList = [
   "@types/react",
   "@types/react-native",
   "@types/react-test-renderer",
+  "@types/react-redux",
+  "@typescript-eslint/parser",
 ];
 
 function execShellCommand(cmd) {
